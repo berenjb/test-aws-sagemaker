@@ -9,6 +9,10 @@ from sagemaker.estimator import Estimator
 import boto3
 import s3fs
 
+
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+
 session = sagemaker.Session(boto3.session.Session())
 
 BUCKET_NAME = os.environ['BUCKET_NAME']
